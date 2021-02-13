@@ -18,7 +18,7 @@ public class MainCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         UnityEngine.Vector3 newPosition = Player.position + _cameraOffset;
 
