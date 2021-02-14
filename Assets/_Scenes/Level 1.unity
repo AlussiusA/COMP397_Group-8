@@ -492,7 +492,7 @@ Camera:
   m_GameObject: {fileID: 338483919}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1140,12 +1140,16 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
+      propertyPath: gravity
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: jumpBoost
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: jumpSpeed
-      value: 12
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: turnSpeed
@@ -1672,7 +1676,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2230,7 +2234,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
