@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8f;
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 20.0f;
+    public float jumpBoost = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +39,21 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetInteger("AnimationPar", 0);
         }
-
+        
         if (controller.isGrounded)
         {
             moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+            moveDirection.y = -gravity * Time.deltaTime; // resetting gravity to an initial (hoprefully small) value instead of zero to fix a bug with the ground check
 
             if (Input.GetAxis("Jump") > 0)
             {
                 moveDirection.y = jumpSpeed;
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    // when jumping forward, add a little to the player's forward momentum
+                    // this helps prevent stiff jumps from standing, and makes forward jumps feel better
+                    moveDirection += transform.forward * jumpBoost;
+                }
             }
         }
 

@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 7629200869422948401}
   - component: {fileID: 7547400089854803003}
   - component: {fileID: 7499126459885196139}
-  - component: {fileID: 7528189403001072527}
+  - component: {fileID: 5190666119906686248}
   m_Layer: 0
   m_Name: Stylized Astronaut
   m_TagString: Untagged
@@ -732,7 +732,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.125, z: -0.01}
---- !u!114 &7528189403001072527
+--- !u!114 &5190666119906686248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -741,12 +741,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7632304354646143951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e19da6a22259d4299a67d51a3c65f7, type: 3}
+  m_Script: {fileID: 11500000, guid: b44e91613fd56884e8597f2b14bba237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  turnSpeed: 150
+  turnSpeed: 400
+  jumpSpeed: 8
   gravity: 20
+  jumpBoost: 4
 --- !u!1 &7632305720488642703
 GameObject:
   m_ObjectHideFlags: 0
