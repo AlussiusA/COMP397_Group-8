@@ -2301,6 +2301,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boximon Fiery
       objectReference: {fileID: 0}
+    - target: {fileID: 6280548287468520045, guid: 9f54d8db72ffc384c8f56b08b52ecb1b, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280548287468520045, guid: 9f54d8db72ffc384c8f56b08b52ecb1b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f54d8db72ffc384c8f56b08b52ecb1b, type: 3}
 --- !u!4 &2101279977 stripped

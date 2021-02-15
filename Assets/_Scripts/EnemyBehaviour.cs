@@ -5,18 +5,23 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    private Animator anim;
     public NavMeshAgent navMeshAgent;
     public Transform player;
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = gameObject.GetComponentInChildren<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.forward.magnitude > 0)
+        {
+            anim.SetBool("Walk Forward", true);
+        }
         navMeshAgent.SetDestination(player.position);
     }
 }
