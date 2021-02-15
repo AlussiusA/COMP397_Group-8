@@ -20,12 +20,14 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 20.0f;
     public float jumpBoost = 4f;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -34,10 +36,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Vertical") != 0) // see input manager for the actual key bindings
         {
             anim.SetInteger("AnimationPar", 1);
+            
         }
         else
         {
             anim.SetInteger("AnimationPar", 0);
+            
         }
         
         if (controller.isGrounded)
