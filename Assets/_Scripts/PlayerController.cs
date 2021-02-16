@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator anim;
     private CharacterController controller;
+    public GameObject Panel;
 
     public float speed = 600.0f;
     public float turnSpeed = 400.0f;
@@ -65,5 +66,19 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
         controller.Move(moveDirection * Time.deltaTime);
         moveDirection.y -= gravity * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                Panel.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Panel.SetActive(false);
+            }
+        }
     }
 }
