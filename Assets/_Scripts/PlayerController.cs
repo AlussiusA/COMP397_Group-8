@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public float jumpBoost = 4f;
     AudioSource audio;
 
+    public int partsCollected = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +81,15 @@ public class PlayerController : MonoBehaviour
                 Time.timeScale = 1;
                 Panel.SetActive(false);
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ShipPart"))
+        {
+            other.GetComponent<ShipPartBehaviour>().CollectItem();
+            partsCollected += 1;
         }
     }
 }
