@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource jumpSound;
     public AudioSource footstepSound;
 
+    [Header("In Game Status")]
     public int partsCollected = 0;
+    public int health = 100;
 
     // Start is called before the first frame update
     void Start()
