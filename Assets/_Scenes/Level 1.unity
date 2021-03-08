@@ -157,6 +157,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -167,6 +171,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -261,7 +269,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15530657}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -371,6 +379,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -381,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -465,7 +481,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36903227}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -607,6 +623,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -617,6 +637,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -680,6 +704,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -690,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -784,7 +816,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89805387}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -818,7 +850,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113933861}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -945,6 +977,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -955,6 +991,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -1436,6 +1476,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -1446,6 +1490,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -1535,6 +1583,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -1545,6 +1597,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -1639,7 +1695,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402185725}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -1696,7 +1752,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420776624}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -1863,6 +1919,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -1873,6 +1933,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -2163,7 +2227,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580637406}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -2202,7 +2266,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688526549}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -2646,6 +2710,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -2656,6 +2724,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -2750,7 +2822,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767386157}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -2830,7 +2902,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812596418}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -3018,6 +3090,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3028,6 +3104,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -3112,7 +3192,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878770813}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -3125,6 +3205,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3135,6 +3219,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -3553,7 +3641,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088676386}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -3749,6 +3837,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3759,6 +3851,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -3827,7 +3923,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190157091}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -3861,7 +3957,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214959603}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -4231,6 +4327,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -4241,6 +4341,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -4333,7 +4437,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401155718}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -4425,6 +4529,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -4435,6 +4543,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -4668,6 +4780,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -4678,6 +4794,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -4741,6 +4861,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -4751,6 +4875,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -4845,7 +4973,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608854772}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -5043,6 +5171,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -5053,6 +5185,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5147,7 +5283,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641057505}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -5181,6 +5317,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -5191,6 +5331,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5254,6 +5398,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -5264,6 +5412,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5588,7 +5740,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698052903}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -5617,6 +5769,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -5627,6 +5783,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5807,6 +5967,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -5817,6 +5981,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5911,7 +6079,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822105157}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -6087,7 +6255,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864586848}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -6220,7 +6388,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888310383}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -6238,6 +6406,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -6248,6 +6420,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -6316,7 +6492,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937118524}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -6643,6 +6819,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044704493}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -6653,6 +6833,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -6747,7 +6931,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068973724}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -6802,7 +6986,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108512720}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
@@ -6857,6 +7041,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1639516664}
     m_Modifications:
     - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -6867,6 +7055,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_Name
       value: Trap_Needle (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a07105af0bc77a942ac71b139b8f4c4b, type: 3}
       propertyPath: m_NavMeshLayer

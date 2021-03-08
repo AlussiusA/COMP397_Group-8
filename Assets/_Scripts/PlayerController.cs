@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     [Header("Health Related Attributes")]
     public int health = 100;
     public int enemyDamage = 10;
+    public int trapDamage = 50;
     public float damageDelay = 60.0f;
     public HealthBarController healthBar;
     public GameObject damageAlertBG;
@@ -102,7 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Time.frameCount % 2.0f == 0)
             {
-                damageAlertFade.alpha -= .34f;
+                damageAlertFade.alpha -= .05f;
             }
         }
     }
@@ -114,10 +115,17 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<ShipPartBehaviour>().CollectItem();
             partsCollected += 1;
         }
+
         if (other.CompareTag("Enemy"))
         {
             //Debug.Log("Enemy Contact");
             TakeDamage(enemyDamage);
+        }
+
+        if (other.CompareTag("Trap"))
+        {
+            //Debug.Log("Enemy Contact");
+            TakeDamage(trapDamage);
         }
     }
 
@@ -130,6 +138,14 @@ public class PlayerController : MonoBehaviour
                 TakeDamage(enemyDamage);
             }
         }
+
+        //if (other.CompareTag("Trap"))
+        //{
+        //    if (Time.frameCount % damageDelay == 0)
+        //    {
+        //        TakeDamage(trapDamage);
+        //    }
+        //}
     }
 
     public void TakeDamage(int damage)
