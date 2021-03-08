@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator anim;
     private CharacterController controller;
+    private CanvasGroup damageAlertFade;
     public GameObject Panel;
 
     [Header("Game Control Values")]
@@ -26,22 +27,24 @@ public class PlayerController : MonoBehaviour
     [Header("Audios")]
     public AudioSource jumpSound;
     public AudioSource footstepSound;
+    public AudioSource damageSound;
 
     [Header("In Game Status")]
     public int partsCollected = 0;
-    public int health = 100;
 
     [Header("Health Related Attributes")]
+    public int health = 100;
     public int enemyDamage = 10;
     public float damageDelay = 60.0f;
     public HealthBarController healthBar;
+    public GameObject damageAlertBG;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
-        
+        damageAlertFade = damageAlertBG.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
@@ -95,6 +98,13 @@ public class PlayerController : MonoBehaviour
                 Panel.SetActive(false);
             }
         }
+        if (damageAlertFade.alpha > 0)
+        {
+            if (Time.frameCount % 2.0f == 0)
+            {
+                damageAlertFade.alpha -= .34f;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -126,5 +136,7 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
         healthBar.TakeDamage(damage);
+        damageSound.Play();
+        damageAlertFade.alpha = 1.0f;
     }
 }
