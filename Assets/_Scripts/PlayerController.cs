@@ -13,8 +13,10 @@ public class PlayerController : MonoBehaviour
 {
     private Animator anim;
     private CharacterController controller;
+    private CanvasGroup damageAlertFade;
     public GameObject Panel;
 
+    [Header("Game Control Values")]
     public float speed = 600.0f;
     public float turnSpeed = 400.0f;
     public float jumpSpeed = 8f;
@@ -25,20 +27,30 @@ public class PlayerController : MonoBehaviour
     [Header("Audios")]
     public AudioSource jumpSound;
     public AudioSource footstepSound;
+    public AudioSource damageSound;
 
     [Header("Inventory")]
     public InventoryPanelController inventory;
+    public int partsCollected = 0;
+    private float inventoryTimer = 0f;
 
+    [Header("In Game Status")]
     public int partsCollected = 0;
 
-    private float inventoryTimer = 0f;
+    [Header("Health Related Attributes")]
+    public int health = 100;
+    public int enemyDamage = 10;
+    public int trapDamage = 50;
+    public float damageDelay = 60.0f;
+    public HealthBarController healthBar;
+    public GameObject damageAlertBG;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
-        
+        damageAlertFade = damageAlertBG.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
@@ -92,13 +104,21 @@ public class PlayerController : MonoBehaviour
                 Panel.SetActive(false);
             }
         }
-
+        
         if (inventoryTimer > 0f)
         {
             inventoryTimer -= Time.deltaTime;
             if (inventoryTimer <= 0f)
             {
                 inventory.HideInventory();
+            }
+        }
+        
+        if (damageAlertFade.alpha > 0)
+        {
+            if (Time.frameCount % 2.0f == 0)
+            {
+                damageAlertFade.alpha -= .05f;
             }
         }
     }
@@ -112,5 +132,44 @@ public class PlayerController : MonoBehaviour
             inventoryTimer = 5f;
             inventory.ShowInventory();
         }
+
+        if (other.CompareTag("Enemy"))
+        {
+            //Debug.Log("Enemy Contact");
+            TakeDamage(enemyDamage);
+        }
+
+        if (other.CompareTag("Trap"))
+        {
+            //Debug.Log("Enemy Contact");
+            TakeDamage(trapDamage);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            if (Time.frameCount % damageDelay == 0)
+            {
+                TakeDamage(enemyDamage);
+            }
+        }
+
+        //if (other.CompareTag("Trap"))
+        //{
+        //    if (Time.frameCount % damageDelay == 0)
+        //    {
+        //        TakeDamage(trapDamage);
+        //    }
+        //}
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthBar.TakeDamage(damage);
+        damageSound.Play();
+        damageAlertFade.alpha = 1.0f;
     }
 }
