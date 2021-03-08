@@ -21,7 +21,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 20.0f;
     public float jumpBoost = 4f;
-    AudioSource audio;
+
+    [Header("Audios")]
+    public AudioSource jumpSound;
+    public AudioSource footstepSound;
 
     public int partsCollected = 0;
 
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Vertical") != 0) // see input manager for the actual key bindings
         {
             anim.SetInteger("AnimationPar", 1);
-            
+            //footstepSound.Play();
         }
         else
         {
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetAxis("Jump") > 0)
             {
                 moveDirection.y = jumpSpeed;
+                jumpSound.Play();
                 if (Input.GetAxis("Vertical") > 0)
                 {
                     // when jumping forward, add a little to the player's forward momentum
@@ -69,6 +73,7 @@ public class PlayerController : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         moveDirection.y -= gravity * Time.deltaTime;
 
+        // Pause Game Script
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (Time.timeScale == 1)
