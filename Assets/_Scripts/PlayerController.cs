@@ -34,9 +34,6 @@ public class PlayerController : MonoBehaviour
     public int partsCollected = 0;
     private float inventoryTimer = 0f;
 
-    [Header("In Game Status")]
-    public int partsCollected = 0;
-
     [Header("Health Related Attributes")]
     public int health = 100;
     public int enemyDamage = 10;

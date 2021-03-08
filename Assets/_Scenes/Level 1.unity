@@ -1140,6 +1140,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &268225956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1561643528, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+  m_PrefabInstance: {fileID: 2458225298993493638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa089d52b100f442afe383154eb77f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &282196370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 282196370, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
@@ -3694,6 +3705,14 @@ PrefabInstance:
       propertyPath: gravity
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1825456882}
+    - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 268225956}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: jumpBoost
       value: 4
