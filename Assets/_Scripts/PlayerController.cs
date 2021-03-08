@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource jumpSound;
     public AudioSource footstepSound;
     public AudioSource damageSound;
+    public AudioSource roarSound;
 
     [Header("Inventory")]
     public InventoryPanelController inventory;
@@ -167,6 +168,7 @@ public class PlayerController : MonoBehaviour
         health -= damage;
         healthBar.TakeDamage(damage);
         damageSound.Play();
+        roarSound.Play();
         damageAlertFade.alpha = 1.0f;
     }
 }
