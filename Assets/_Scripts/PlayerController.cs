@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public GameObject Panel;
 
+    [Header("Game Control Values")]
     public float speed = 600.0f;
     public float turnSpeed = 400.0f;
     public float jumpSpeed = 8f;
@@ -29,6 +30,11 @@ public class PlayerController : MonoBehaviour
     [Header("In Game Status")]
     public int partsCollected = 0;
     public int health = 100;
+
+    [Header("Health Related Attributes")]
+    public int enemyDamage = 10;
+    public float damageDelay = 60.0f;
+    public HealthBarController healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -98,5 +104,27 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<ShipPartBehaviour>().CollectItem();
             partsCollected += 1;
         }
+        if (other.CompareTag("Enemy"))
+        {
+            //Debug.Log("Enemy Contact");
+            TakeDamage(enemyDamage);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            if (Time.frameCount % damageDelay == 0)
+            {
+                TakeDamage(enemyDamage);
+            }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthBar.TakeDamage(damage);
     }
 }
