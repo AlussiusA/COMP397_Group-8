@@ -549,8 +549,12 @@ MonoBehaviour:
   speed: 0.6
   amplitude: 0.25
   rotationSpeed: 20
-  missingInventoryItem: {fileID: 1843557318}
-  foundInventoryItem: {fileID: 1622076819}
+  missingInventoryItem: {fileID: 1687211276}
+  foundInventoryItem: {fileID: 419619949}
+  pickupRotationSpeed: 360
+  pickupSpeed: 2
+  duration: 1
+  collisionBox: {fileID: 0}
 --- !u!4 &45673120
 Transform:
   m_ObjectHideFlags: 0
@@ -3642,8 +3646,12 @@ MonoBehaviour:
   speed: 0.6
   amplitude: 0.25
   rotationSpeed: 20
-  missingInventoryItem: {fileID: 1687211276}
-  foundInventoryItem: {fileID: 419619949}
+  missingInventoryItem: {fileID: 1843557318}
+  foundInventoryItem: {fileID: 1622076819}
+  pickupRotationSpeed: 360
+  pickupSpeed: 2
+  duration: 1
+  collisionBox: {fileID: 0}
 --- !u!4 &1056070319
 Transform:
   m_ObjectHideFlags: 0
@@ -3730,6 +3738,10 @@ PrefabInstance:
       propertyPath: gravity
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1561643528}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: jumpBoost
       value: 4
@@ -4507,8 +4519,12 @@ MonoBehaviour:
   speed: 0.6
   amplitude: 0.25
   rotationSpeed: 20
-  missingInventoryItem: {fileID: 824449392}
-  foundInventoryItem: {fileID: 1483404230}
+  missingInventoryItem: {fileID: 1352101831}
+  foundInventoryItem: {fileID: 1781387599}
+  pickupRotationSpeed: 360
+  pickupSpeed: 2
+  duration: 1
+  collisionBox: {fileID: 0}
 --- !u!4 &1419773032
 Transform:
   m_ObjectHideFlags: 0
@@ -4524,8 +4540,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1419773033
-SphereCollider:
+--- !u!65 &1419773033
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4535,7 +4551,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1429118797
 PrefabInstance:
@@ -6912,8 +6928,12 @@ MonoBehaviour:
   speed: 0.6
   amplitude: 0.25
   rotationSpeed: 20
-  missingInventoryItem: {fileID: 1352101831}
-  foundInventoryItem: {fileID: 1781387599}
+  missingInventoryItem: {fileID: 824449392}
+  foundInventoryItem: {fileID: 1483404230}
+  pickupRotationSpeed: 360
+  pickupSpeed: 2
+  duration: 1
+  collisionBox: {fileID: 0}
 --- !u!4 &2042005197
 Transform:
   m_ObjectHideFlags: 0

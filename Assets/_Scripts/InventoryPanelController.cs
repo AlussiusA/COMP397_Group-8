@@ -34,11 +34,16 @@ public class InventoryPanelController : MonoBehaviour
     {
         if (pausePanel.activeSelf)
         {
+            isOnScreen = true;
+        }
+
+        if (isOnScreen)
+        {
             if (timer < 0f)
             {
                 timer = 0f;
             }
-            MovePanelDown();
+            MovePanelUp();
         }
         else
         {
@@ -46,11 +51,11 @@ public class InventoryPanelController : MonoBehaviour
             {
                 timer = 1f;
             }
-            MovePanelUp();
+            MovePanelDown();
         }
     }
 
-    private void MovePanelDown()
+    private void MovePanelUp()
     {
         rectTransform.anchoredPosition = Vector2.Lerp(offScreenPosition, onScreenPosition, timer);
         if (timer < 1f)
@@ -59,12 +64,22 @@ public class InventoryPanelController : MonoBehaviour
         }
     }
 
-    private void MovePanelUp()
+    private void MovePanelDown()
     {
         rectTransform.anchoredPosition = Vector2.Lerp(offScreenPosition, onScreenPosition, timer);
         if (timer > 0f)
         {
             timer -= Time.unscaledDeltaTime * speed;
         }
+    }
+
+    public void ShowInventory()
+    {
+        isOnScreen = true;
+    }
+
+    public void HideInventory()
+    {
+        isOnScreen = false;
     }
 }

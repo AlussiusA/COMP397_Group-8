@@ -26,7 +26,12 @@ public class PlayerController : MonoBehaviour
     public AudioSource jumpSound;
     public AudioSource footstepSound;
 
+    [Header("Inventory")]
+    public InventoryPanelController inventory;
+
     public int partsCollected = 0;
+
+    private float inventoryTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +92,15 @@ public class PlayerController : MonoBehaviour
                 Panel.SetActive(false);
             }
         }
+
+        if (inventoryTimer > 0f)
+        {
+            inventoryTimer -= Time.deltaTime;
+            if (inventoryTimer <= 0f)
+            {
+                inventory.HideInventory();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,6 +109,8 @@ public class PlayerController : MonoBehaviour
         {
             other.GetComponent<ShipPartBehaviour>().CollectItem();
             partsCollected += 1;
+            inventoryTimer = 5f;
+            inventory.ShowInventory();
         }
     }
 }
