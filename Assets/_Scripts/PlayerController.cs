@@ -43,12 +43,17 @@ public class PlayerController : MonoBehaviour
     public HealthBarController healthBar;
     public GameObject damageAlertBG;
 
+    [Header("Victory Screen")]
+    public GameObject victoryScreen;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
         damageAlertFade = damageAlertBG.GetComponent<CanvasGroup>();
+
+        victoryScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -129,18 +134,33 @@ public class PlayerController : MonoBehaviour
             partsCollected += 1;
             inventoryTimer = 5f;
             inventory.ShowInventory();
+            return;
         }
 
         if (other.CompareTag("Enemy"))
         {
             //Debug.Log("Enemy Contact");
             TakeDamage(enemyDamage);
+            return;
         }
 
         if (other.CompareTag("Trap"))
         {
-            //Debug.Log("Enemy Contact");
             TakeDamage(trapDamage);
+            return;
+        }
+
+        if (other.CompareTag("Goal"))
+        {
+            if (partsCollected >= 4)
+            {
+                victoryScreen.SetActive(true);
+            }
+            else
+            {
+                inventory.ShowInventory();
+            }
+            return;
         }
     }
 
@@ -161,6 +181,14 @@ public class PlayerController : MonoBehaviour
         //        TakeDamage(trapDamage);
         //    }
         //}
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Goal"))
+        {
+            inventory.HideInventory();
+        }
     }
 
     public void TakeDamage(int damage)
