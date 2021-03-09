@@ -140,6 +140,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             //Debug.Log("Enemy Contact");
+            roarSound.Play();
             TakeDamage(enemyDamage);
             return;
         }
@@ -196,7 +197,6 @@ public class PlayerController : MonoBehaviour
         health -= damage;
         healthBar.TakeDamage(damage);
         damageSound.Play();
-        roarSound.Play();
         damageAlertFade.alpha = 1.0f;
     }
 }
