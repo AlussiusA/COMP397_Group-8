@@ -9,4 +9,11 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+   public void doExitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+        Debug.Log("Game is exiting");
+    }
 }
