@@ -21,7 +21,7 @@ public class SceneSwitcher : MonoBehaviour
 
    public void doExitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
         Debug.Log("Game is exiting");
     }
