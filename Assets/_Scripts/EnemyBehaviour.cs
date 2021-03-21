@@ -1,10 +1,10 @@
 /*
- * ControlPanelController.cs
+ * EnemyBehaviour.cs
  * ------------------------------
  * Authors: Aloy, Alussius
  *          Ganguli, Jay
  *          Meija Razo, Edgar
- * Last Edited: 2021-03-02
+ * Last Edited: 2021-03-21
  */
 
 using System.Collections;
@@ -16,12 +16,14 @@ public class EnemyBehaviour : MonoBehaviour
 {
     private Animator anim;
     public NavMeshAgent navMeshAgent;
-    public Transform player;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponentInChildren<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+
+        player = FindObjectOfType<PlayerController>().gameObject;
     }
 
     // Update is called once per frame
@@ -31,6 +33,9 @@ public class EnemyBehaviour : MonoBehaviour
         {
             anim.SetBool("Walk Forward", true);
         }
-        navMeshAgent.SetDestination(player.position);
+        if ((transform.position - player.transform.position).magnitude < 20)
+        {
+            navMeshAgent.SetDestination(player.transform.position);
+        }
     }
 }

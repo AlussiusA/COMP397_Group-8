@@ -1,5 +1,5 @@
 /*
- * ControlPanelController.cs
+ * SceneSwitcher.cs
  * ------------------------------
  * Authors: Aloy, Alussius
  *          Ganguli, Jay
