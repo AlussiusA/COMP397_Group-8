@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     private CanvasGroup damageAlertFade;
     public GameObject Panel;
 
+    [Header("Controls")]
+    public Joystick joystick;
+    public float horizontalSensitivity;
+    public float verticalSensitivity;
+
     [Header("Game Control Values")]
     public float speed = 600.0f;
     public float turnSpeed = 400.0f;
@@ -59,7 +64,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Vertical") != 0) // see input manager for the actual key bindings
+        if (joystick.Vertical != 0) // see input manager for the actual key bindings
         {
             anim.SetInteger("AnimationPar", 1);
             //footstepSound.Play();
@@ -72,14 +77,14 @@ public class PlayerController : MonoBehaviour
         
         if (controller.isGrounded)
         {
-            moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+            moveDirection = transform.forward * joystick.Vertical * speed;
             moveDirection.y = -gravity * Time.deltaTime; // resetting gravity to an initial (hoprefully small) value instead of zero to fix a bug with the ground check
 
             if (Input.GetAxis("Jump") > 0)
             {
                 moveDirection.y = jumpSpeed;
                 jumpSound.Play();
-                if (Input.GetAxis("Vertical") > 0)
+                if (joystick.Vertical > 0)
                 {
                     // when jumping forward, add a little to the player's forward momentum
                     // this helps prevent stiff jumps from standing, and makes forward jumps feel better
@@ -88,7 +93,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        float turn = Input.GetAxis("Horizontal");
+        float turn = joystick.Horizontal;
         transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
         controller.Move(moveDirection * Time.deltaTime);
         moveDirection.y -= gravity * Time.deltaTime;
