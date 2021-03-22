@@ -12,7 +12,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Animator anim;
-    private CharacterController controller;
+    public CharacterController controller;
     private CanvasGroup damageAlertFade;
     public GameObject Panel;
 
