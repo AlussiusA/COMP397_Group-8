@@ -17,7 +17,6 @@ public class EnemyBehaviour : MonoBehaviour
     private Animator anim;
     public NavMeshAgent navMeshAgent;
     public GameObject player;
-    public float playerDetectionRange = 25;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +33,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             anim.SetBool("Walk Forward", true);
         }
-        if ((transform.position - player.transform.position).magnitude < playerDetectionRange)
+        if ((transform.position - player.transform.position).magnitude < 20)
         {
             navMeshAgent.SetDestination(player.transform.position);
         }
