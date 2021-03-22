@@ -32,6 +32,7 @@ public class InventoryPanelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isOnScreen = false;
         if (pausePanel.activeSelf)
         {
             isOnScreen = true;

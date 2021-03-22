@@ -77,41 +77,14 @@ public class PlayerController : MonoBehaviour
         
         if (controller.isGrounded)
         {
-            moveDirection = transform.forward * joystick.Vertical * speed;
+            moveDirection = transform.forward * -joystick.Vertical * speed;
             moveDirection.y = -gravity * Time.deltaTime; // resetting gravity to an initial (hoprefully small) value instead of zero to fix a bug with the ground check
-
-            if (Input.GetAxis("Jump") > 0)
-            {
-                moveDirection.y = jumpSpeed;
-                jumpSound.Play();
-                if (joystick.Vertical > 0)
-                {
-                    // when jumping forward, add a little to the player's forward momentum
-                    // this helps prevent stiff jumps from standing, and makes forward jumps feel better
-                    moveDirection += transform.forward * jumpBoost;
-                }
-            }
         }
 
-        float turn = joystick.Horizontal;
+        float turn = -joystick.Horizontal;
         transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
         controller.Move(moveDirection * Time.deltaTime);
         moveDirection.y -= gravity * Time.deltaTime;
-
-        // Pause Game Script
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-                Panel.SetActive(true);
-            }
-            else
-            {
-                Time.timeScale = 1;
-                Panel.SetActive(false);
-            }
-        }
         
         if (inventoryTimer > 0f)
         {
@@ -128,6 +101,38 @@ public class PlayerController : MonoBehaviour
             {
                 damageAlertFade.alpha -= .05f;
             }
+        }
+    }
+
+    public void OnJumpButtonPress()
+    {
+        if (controller.isGrounded)
+        {
+            moveDirection.y = jumpSpeed;
+            jumpSound.Play();
+            if (joystick.Vertical > 0)
+            {
+                // when jumping forward, add a little to the player's forward momentum
+                // this helps prevent stiff jumps from standing, and makes forward jumps feel better
+                moveDirection += transform.forward * jumpBoost;
+            }
+
+            controller.Move(moveDirection * Time.deltaTime);
+        }
+    }
+
+    public void OnPauseButtonPress()
+    {
+        // Pause Game Script
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            Panel.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Panel.SetActive(false);
         }
     }
 
