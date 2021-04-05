@@ -209,4 +209,10 @@ public class PlayerController : MonoBehaviour
         damageSound.Play();
         damageAlertFade.alpha = 1.0f;
     }
+
+    public void SetHealth(int healthValue)
+    {
+        health = healthValue;
+        healthBar.SetHealth(health);
+    }
 }

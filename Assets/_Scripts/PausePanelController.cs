@@ -48,6 +48,7 @@ public class PausePanelController : MonoBehaviour
         }
 
         // Load health and collected parts here
+        player.SetHealth(sceneData.health);
     }
 
     public void OnSaveButtonPressed()
@@ -62,5 +63,6 @@ public class PausePanelController : MonoBehaviour
             collectedParts[i] = !(shipParts[i].gameObject.activeSelf);
         }
         sceneData.collectedParts = collectedParts;
+        sceneData.health = player.health;
     }
 }
