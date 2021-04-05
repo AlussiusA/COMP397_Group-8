@@ -9,4 +9,5 @@ public class SceneDataSO : ScriptableObject
     public Vector3 playerPosition;
     public Quaternion playerRotation;
     // health and ship parts here
+    public bool[] collectedParts;
 }

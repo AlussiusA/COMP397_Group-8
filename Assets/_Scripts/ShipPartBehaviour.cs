@@ -70,6 +70,19 @@ public class ShipPartBehaviour : MonoBehaviour
         isCollected = true;
         collisionBox.enabled = false;
 
-        Destroy(gameObject, duration);
+        // Destroy(gameObject, duration);
+        gameObject.SetActive(false);
+    }
+
+    public void ResetItem()
+    {
+        // the opposite of CollectItem()
+        missingInventoryItem.SetActive(true);
+        foundInventoryItem.SetActive(false);
+
+        isCollected = false;
+        collisionBox.enabled = true;
+
+        gameObject.SetActive(true);
     }
 }
