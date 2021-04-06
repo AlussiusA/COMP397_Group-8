@@ -529,7 +529,7 @@ MonoBehaviour:
   pickupRotationSpeed: 360
   pickupSpeed: 2
   duration: 1
-  collisionBox: {fileID: 0}
+  collisionBox: {fileID: 45673121}
 --- !u!4 &45673120
 Transform:
   m_ObjectHideFlags: 0
@@ -4207,7 +4207,7 @@ MonoBehaviour:
   pickupRotationSpeed: 360
   pickupSpeed: 2
   duration: 1
-  collisionBox: {fileID: 0}
+  collisionBox: {fileID: 1056070320}
 --- !u!4 &1056070319
 Transform:
   m_ObjectHideFlags: 0
@@ -4461,6 +4461,10 @@ PrefabInstance:
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1110451654}
+    - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: damageSound
       value: 
       objectReference: {fileID: 754774504}
@@ -4577,6 +4581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44e91613fd56884e8597f2b14bba237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!143 &1110451654 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 7499126459885196139, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
+  m_PrefabInstance: {fileID: 1110451652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1125309584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,7 +5674,7 @@ MonoBehaviour:
   pickupRotationSpeed: 360
   pickupSpeed: 2
   duration: 1
-  collisionBox: {fileID: 0}
+  collisionBox: {fileID: 1419773033}
 --- !u!4 &1419773032
 Transform:
   m_ObjectHideFlags: 0
@@ -8284,7 +8293,7 @@ MonoBehaviour:
   pickupRotationSpeed: 360
   pickupSpeed: 2
   duration: 1
-  collisionBox: {fileID: 0}
+  collisionBox: {fileID: 2042005198}
 --- !u!4 &2042005197
 Transform:
   m_ObjectHideFlags: 0
@@ -8710,6 +8719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 2448015083377179644, guid: 3afe9b5f446ec2249a7e86e7a130a210, type: 3}
+      propertyPath: healthBarSlider
+      value: 
+      objectReference: {fileID: 2448015083982856266}
     - target: {fileID: 2448015083377179645, guid: 3afe9b5f446ec2249a7e86e7a130a210, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8816,6 +8829,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3afe9b5f446ec2249a7e86e7a130a210, type: 3}
+--- !u!114 &2448015083982856266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2448015083377179647, guid: 3afe9b5f446ec2249a7e86e7a130a210, type: 3}
+  m_PrefabInstance: {fileID: 2448015083982856265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2458225298993493638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8825,7 +8849,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 282196370, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1561643525, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: m_AnchorMax.x

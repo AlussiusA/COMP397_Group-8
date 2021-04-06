@@ -19,6 +19,19 @@ public class PausePanelController : MonoBehaviour
         
     }
 
+    private void Awake()
+    {
+        GameObject scene = GameObject.Find("SceneController");
+        if (scene)
+        {
+            if (scene.GetComponent<SceneSwitcher>().loadSave)
+            {
+                OnLoadButtonPressed();
+            }
+        }
+        gameObject.SetActive(false);
+    }
+
     public void OnLoadButtonPressed()
     {
         player.controller.enabled = false;

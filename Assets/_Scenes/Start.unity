@@ -561,6 +561,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 60, y: -30, z: 0}
+--- !u!1 &818172192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 818172194}
+  - component: {fileID: 818172193}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &818172193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818172192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6584ed276c370d4baefa13190d04135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadSave: 0
+--- !u!4 &818172194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818172192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.720171, y: 8.171445, z: 30.904589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974781204
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,28 +805,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081157760}
   m_CullTransparentMesh: 1
---- !u!1 &1088141125 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1395584455796206145, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
-  m_PrefabInstance: {fileID: 1395584456321068209}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1088141129 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1395584455796206149, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
   m_PrefabInstance: {fileID: 1395584456321068209}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1088141130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088141125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6584ed276c370d4baefa13190d04135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1139355006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1395584456321927341, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
@@ -884,7 +911,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088141130}
+      - m_Target: {fileID: 818172193}
         m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
         m_MethodName: doExitGame
         m_Mode: 1
@@ -1294,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 1395584455801010878, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1088141130}
+      objectReference: {fileID: 818172193}
     - target: {fileID: 1395584455801010878, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1348,6 +1375,34 @@ PrefabInstance:
       value: PanelLogic, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1395584456321927343, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 818172193}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395584456500048746, guid: abb5bf45c09d6c541a887bda65c4e32f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}

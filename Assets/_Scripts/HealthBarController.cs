@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class HealthBarController : MonoBehaviour
 {
-    private Slider healthBarSlider;
+    public Slider healthBarSlider;
 
     [Header("Health Values")]
     [Range(0, 100)]
