@@ -16,11 +16,6 @@ public class PausePanelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    private void Awake()
-    {
         GameObject scene = GameObject.Find("SceneController");
         if (scene)
         {
@@ -34,6 +29,8 @@ public class PausePanelController : MonoBehaviour
 
     public void OnLoadButtonPressed()
     {
+        LoadFromPlayerPrefs();
+
         player.controller.enabled = false;
         player.transform.position = sceneData.playerPosition;
         player.transform.localRotation = sceneData.playerRotation;
@@ -44,13 +41,13 @@ public class PausePanelController : MonoBehaviour
         int i = 0;
         while (i < sceneData.collectedParts.Length && i < shipParts.Length)
         {
-            if (!(sceneData.collectedParts[i]))
+            if (sceneData.collectedParts[i])
             {
-                shipParts[i].ResetItem();
+                shipParts[i].CollectItem();
             }
             else
             {
-                shipParts[i].CollectItem();
+                shipParts[i].ResetItem();
             }
             i++;
         }
@@ -77,5 +74,66 @@ public class PausePanelController : MonoBehaviour
         }
         sceneData.collectedParts = collectedParts;
         sceneData.health = player.health;
+
+        SaveToPlayerPrefs();
+    }
+
+    public void SaveToPlayerPrefs()
+    {
+        PlayerPrefs.SetFloat("playerTransformX", sceneData.playerPosition.x);
+        PlayerPrefs.SetFloat("playerTransformY", sceneData.playerPosition.y);
+        PlayerPrefs.SetFloat("playerTransformZ", sceneData.playerPosition.z);
+
+        PlayerPrefs.SetFloat("playerRotationX", sceneData.playerRotation.x);
+        PlayerPrefs.SetFloat("playerRotationY", sceneData.playerRotation.y);
+        PlayerPrefs.SetFloat("playerRotationZ", sceneData.playerRotation.z);
+        PlayerPrefs.SetFloat("playerRotationW", sceneData.playerRotation.w);
+
+        PlayerPrefs.SetInt("playerHealth", sceneData.health);
+
+        for (int i = 0; i < shipParts.Length; i++)
+        {
+            if (shipParts[i].gameObject.activeSelf)
+            {
+                PlayerPrefs.SetInt("collectedPart" + i, 0);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("collectedPart" + i, 1);
+            }
+        }
+    }
+
+    public void LoadFromPlayerPrefs()
+    {
+        if (!(PlayerPrefs.HasKey("playerHealth")))
+        {
+            return;
+        }
+
+        sceneData.playerPosition.x = PlayerPrefs.GetFloat("playerTransformX");
+        sceneData.playerPosition.y = PlayerPrefs.GetFloat("playerTransformY");
+        sceneData.playerPosition.z = PlayerPrefs.GetFloat("playerTransformZ");
+
+        sceneData.playerRotation.x = PlayerPrefs.GetFloat("playerRotationX");
+        sceneData.playerRotation.y = PlayerPrefs.GetFloat("playerRotationY");
+        sceneData.playerRotation.z = PlayerPrefs.GetFloat("playerRotationZ");
+        sceneData.playerRotation.w = PlayerPrefs.GetFloat("playerRotationW");
+
+        sceneData.health = PlayerPrefs.GetInt("playerHealth");
+
+        bool[] collectedParts = new bool[shipParts.Length];
+        for(int i = 0; i < shipParts.Length; i++)
+        {
+            if (PlayerPrefs.HasKey("collectedPart"+i))
+            {
+                collectedParts[i] = PlayerPrefs.GetInt("collectedPart" + i, 0) == 1;
+            }
+            else
+            {
+                collectedParts[i] = false;
+            }
+        }
+        sceneData.collectedParts = collectedParts;
     }
 }
