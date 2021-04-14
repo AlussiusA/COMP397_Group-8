@@ -4442,7 +4442,7 @@ PrefabInstance:
       objectReference: {fileID: 268225956}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: jumpBoost
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5190666119906686248, guid: 2cb6ca617bc42294c894e6dab3074a41, type: 3}
       propertyPath: jumpSound

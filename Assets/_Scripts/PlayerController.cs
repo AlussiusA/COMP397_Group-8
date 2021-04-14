@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8f;
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 20.0f;
-    public float jumpBoost = 4f;
+    public float jumpBoost = 2f;
 
     [Header("Audios")]
     public AudioSource jumpSound;
@@ -79,6 +79,11 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection = transform.forward * -joystick.Vertical * speed;
             moveDirection.y = -gravity * Time.deltaTime; // resetting gravity to an initial (hoprefully small) value instead of zero to fix a bug with the ground check
+        }
+        else
+        {
+            // directional influence in the air
+            moveDirection += transform.forward * -joystick.Vertical * speed * 3f * Time.deltaTime;
         }
 
         float turn = -joystick.Horizontal;

@@ -744,11 +744,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44e91613fd56884e8597f2b14bba237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  Panel: {fileID: 0}
+  joystick: {fileID: 0}
+  horizontalSensitivity: 0
+  verticalSensitivity: 0
   speed: 7
   turnSpeed: 400
   jumpSpeed: 8
   gravity: 20
-  jumpBoost: 4
+  jumpBoost: 2
+  jumpSound: {fileID: 0}
+  footstepSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  roarSound: {fileID: 0}
+  inventory: {fileID: 0}
+  partsCollected: 0
+  health: 100
+  enemyDamage: 10
+  trapDamage: 50
+  damageDelay: 60
+  healthBar: {fileID: 0}
+  damageAlertBG: {fileID: 0}
+  victoryScreen: {fileID: 0}
 --- !u!1 &7632305720488642703
 GameObject:
   m_ObjectHideFlags: 0
