@@ -4,7 +4,7 @@
  * Authors: Aloy, Alussius
  *          Ganguli, Jay
  *          Meija Razo, Edgar
- * Last Edited: 2021-03-02
+ * Last Edited: 2021-04-14
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -32,11 +32,11 @@ public class InventoryPanelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isOnScreen = false;
-        if (pausePanel.activeSelf)
-        {
-            isOnScreen = true;
-        }
+        //isOnScreen = false;
+        //if (pausePanel.activeSelf)
+        //{
+        //    isOnScreen = true;
+        //}
 
         if (isOnScreen)
         {

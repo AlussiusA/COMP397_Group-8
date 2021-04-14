@@ -128,11 +128,13 @@ public class PlayerController : MonoBehaviour
         {
             Time.timeScale = 0;
             Panel.SetActive(true);
+            inventory.ShowInventory();
         }
         else
         {
             Time.timeScale = 1;
             Panel.SetActive(false);
+            inventory.HideInventory();
         }
     }
 
