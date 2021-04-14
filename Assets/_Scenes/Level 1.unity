@@ -8851,6 +8851,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 579774991, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 579774991, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 579774992, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 579774992, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 579774992, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 1561643525, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -8860,16 +8880,36 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1561643525, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561643525, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561643525, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561643525, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 1561643528, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: onScreenPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1561643528, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: onScreenPosition.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561643528, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: offScreenPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561643528, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
+      propertyPath: offScreenPosition.y
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 2458225299746298241, guid: 4479ae948b6fecd47b6cec1aecb5add5, type: 3}
       propertyPath: m_UiScaleMode
