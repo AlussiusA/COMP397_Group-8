@@ -13,6 +13,9 @@ public class PausePanelController : MonoBehaviour
     [Header("Ship Parts")]
     public ShipPartBehaviour[] shipParts;
 
+    [Header("Quests")]
+    public TutorialQuests tutorial;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -20,6 +20,8 @@ public class TutorialQuests : MonoBehaviour
     public GameObject tutorialJumpUI;
     public GameObject tutorialPauseUI;
 
+    public bool tutorialFinished = false;
+
     // other stuff for tracking changes in stats
     private int previousJumps = 0;
     private int previousPause = 0;
@@ -32,11 +34,16 @@ public class TutorialQuests : MonoBehaviour
             stats = FindObjectOfType<PlayerStats>();
         }
 
-        stats.Subscribe(TutorialMove); // add the first objective to the stats delegate
-
-        tutorialMoveUI.SetActive(true);
+        tutorialMoveUI.SetActive(false);
         tutorialJumpUI.SetActive(false);
         tutorialPauseUI.SetActive(false);
+
+        if (!tutorialFinished)
+        {
+            stats.Subscribe(TutorialMove); // add the first objective to the stats delegate
+
+            tutorialMoveUI.SetActive(true);
+        }
     }
 
     public void TutorialMove()
@@ -76,6 +83,8 @@ public class TutorialQuests : MonoBehaviour
         {
             tutorialPauseUI.SetActive(false);
             stats.Unsubscribe(TutorialPause);
+
+            tutorialFinished = true;
         }
     }
 }

@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    // stats we may want to track
     public int jumpButtonPressed = 0;
     public int pauseButtonPressed = 0;
     public float distanceWalked = 0f;
