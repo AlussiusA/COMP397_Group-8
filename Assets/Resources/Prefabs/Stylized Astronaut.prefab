@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 7547400089854803003}
   - component: {fileID: 7499126459885196139}
   - component: {fileID: 5190666119906686248}
+  - component: {fileID: 3691385006551687304}
   m_Layer: 0
   m_Name: Stylized Astronaut
   m_TagString: Untagged
@@ -767,6 +768,21 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   damageAlertBG: {fileID: 0}
   victoryScreen: {fileID: 0}
+--- !u!114 &3691385006551687304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632304354646143951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da30d9c139b90e4398b66e210a494b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpButtonPressed: 0
+  pauseButtonPressed: 0
+  distanceTraveled: 0
 --- !u!1 &7632305720488642703
 GameObject:
   m_ObjectHideFlags: 0

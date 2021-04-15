@@ -51,12 +51,20 @@ public class PlayerController : MonoBehaviour
     [Header("Victory Screen")]
     public GameObject victoryScreen;
 
+    [Header("Observable")]
+    public PlayerStats playerStats;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
         damageAlertFade = damageAlertBG.GetComponent<CanvasGroup>();
+
+        if (playerStats == null)
+        {
+            playerStats = GetComponent<PlayerStats>();
+        }
 
         victoryScreen.SetActive(false);
     }
@@ -79,6 +87,9 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection = transform.forward * -joystick.Vertical * speed;
             moveDirection.y = -gravity * Time.deltaTime; // resetting gravity to an initial (hoprefully small) value instead of zero to fix a bug with the ground check
+
+            playerStats.distanceWalked += Mathf.Abs(joystick.Vertical) * speed * Time.deltaTime;
+            playerStats.NotifyUpdate();
         }
         else
         {
@@ -123,6 +134,10 @@ public class PlayerController : MonoBehaviour
             }
 
             controller.Move(moveDirection * Time.deltaTime);
+
+            // update stats/observable
+            playerStats.jumpButtonPressed += 1;
+            playerStats.NotifyUpdate();
         }
     }
 
@@ -134,6 +149,10 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
             Panel.SetActive(true);
             inventory.ShowInventory();
+
+            // update stats/observable
+            playerStats.pauseButtonPressed += 1;
+            playerStats.NotifyUpdate();
         }
         else
         {
