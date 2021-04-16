@@ -72,6 +72,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnJumpButtonPress();
+        }
+
         if (joystick.Vertical != 0) // see input manager for the actual key bindings
         {
             anim.SetInteger("AnimationPar", 1);
@@ -90,11 +95,6 @@ public class PlayerController : MonoBehaviour
 
             playerStats.distanceWalked += Mathf.Abs(joystick.Vertical) * speed * Time.deltaTime;
             playerStats.NotifyUpdate();
-        }
-        else
-        {
-            // directional influence in the air
-            moveDirection += transform.forward * -joystick.Vertical * speed * 3f * Time.deltaTime;
         }
 
         float turn = -joystick.Horizontal;
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection.y = jumpSpeed;
             jumpSound.Play();
-            if (joystick.Vertical > 0)
+            if (Mathf.Abs(joystick.Vertical) > 0)
             {
                 // when jumping forward, add a little to the player's forward momentum
                 // this helps prevent stiff jumps from standing, and makes forward jumps feel better
