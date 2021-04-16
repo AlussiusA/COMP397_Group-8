@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     [Header("Health Related Attributes")]
     public int health = 100;
     public int enemyDamage = 10;
-    public int trapDamage = 50;
+    public int trapDamage = 10;
     public float damageDelay = 60.0f;
     public HealthBarController healthBar;
     public GameObject damageAlertBG;
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("Trap"))
         {
-            TakeDamage(trapDamage);
+            TakeDamage(enemyDamage);
             return;
         }
 
