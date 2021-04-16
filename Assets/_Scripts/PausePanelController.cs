@@ -39,6 +39,8 @@ public class PausePanelController : MonoBehaviour
         player.transform.localRotation = sceneData.playerRotation;
         player.controller.enabled = true;
 
+        tutorial.SetTutorial(!sceneData.completedTutorial);
+
         // this section looks complicated because it makes no assumption about the length of
         // either shipParts array. This allows us to use as many parts as we want
         int i = 0;
@@ -78,6 +80,8 @@ public class PausePanelController : MonoBehaviour
         sceneData.collectedParts = collectedParts;
         sceneData.health = player.health;
 
+        sceneData.completedTutorial = tutorial.tutorialFinished;
+
         SaveToPlayerPrefs();
     }
 
@@ -104,6 +108,15 @@ public class PausePanelController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("collectedPart" + i, 1);
             }
+        }
+
+        if (sceneData.completedTutorial)
+        {
+            PlayerPrefs.SetInt("tutorialComplete", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("tutorialComplete", 0);
         }
     }
 
@@ -138,5 +151,14 @@ public class PausePanelController : MonoBehaviour
             }
         }
         sceneData.collectedParts = collectedParts;
+
+        if (PlayerPrefs.GetInt("tutorialComplete") == 1)
+        {
+            sceneData.completedTutorial = true;
+        }
+        else
+        {
+            sceneData.completedTutorial = false;
+        }
     }
 }

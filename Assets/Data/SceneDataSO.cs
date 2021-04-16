@@ -12,4 +12,5 @@ public class SceneDataSO : ScriptableObject
     // health and ship parts here
     public int health = 100;
     public bool[] collectedParts;
+    public bool completedTutorial = false;
 }

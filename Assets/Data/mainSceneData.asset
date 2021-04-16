@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0aa63cc3dbdef45a7a85f7206ea03f, type: 3}
   m_Name: mainSceneData
   m_EditorClassIdentifier: 
-  playerPosition: {x: 0, y: 6.55, z: -0.3}
-  playerRotation: {x: 0, y: 0, z: 0, w: 0}
+  playerPosition: {x: -1.2, y: 5.933063, z: -2.6071942}
+  playerRotation: {x: -0, y: -0, z: -0, w: 1}
   health: 100
-  collectedParts: 
+  collectedParts: 00000000
+  completedTutorial: 0

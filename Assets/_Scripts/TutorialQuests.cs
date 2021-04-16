@@ -46,6 +46,23 @@ public class TutorialQuests : MonoBehaviour
         }
     }
 
+    public void SetTutorial(bool enable)
+    {
+        tutorialFinished = !enable;
+
+        if (tutorialFinished)
+        {
+            tutorialMoveUI.SetActive(false);
+            tutorialJumpUI.SetActive(false);
+            tutorialPauseUI.SetActive(false);
+        }
+        else 
+        {
+            stats.Subscribe(TutorialMove);
+            tutorialMoveUI.SetActive(true);
+        }
+    }
+
     public void TutorialMove()
     {
         // whenever this gets called, check the player stats and react accordingly
@@ -57,9 +74,12 @@ public class TutorialQuests : MonoBehaviour
             // unsub this observer (since we're done with this objective) and set up the next one
             stats.Unsubscribe(TutorialMove);
 
-            previousJumps = stats.jumpButtonPressed;
-            tutorialJumpUI.SetActive(true);
-            stats.Subscribe(TutorialJump);
+            if (!tutorialFinished)
+            {
+                previousJumps = stats.jumpButtonPressed;
+                tutorialJumpUI.SetActive(true);
+                stats.Subscribe(TutorialJump);
+            }
         }
     }
 
@@ -71,9 +91,12 @@ public class TutorialQuests : MonoBehaviour
             tutorialJumpUI.SetActive(false);
             stats.Unsubscribe(TutorialJump);
 
-            previousPause = stats.pauseButtonPressed;
-            tutorialPauseUI.SetActive(true);
-            stats.Subscribe(TutorialPause);
+            if (!tutorialFinished)
+            {
+                previousPause = stats.pauseButtonPressed;
+                tutorialPauseUI.SetActive(true);
+                stats.Subscribe(TutorialPause);
+            }
         }
     }
 
