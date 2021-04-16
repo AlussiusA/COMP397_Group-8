@@ -32,6 +32,12 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void ReturnToMain()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
    public void doExitGame()
     {
         //UnityEditor.EditorApplication.isPlaying = false;

@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
     [Header("Victory Screen")]
     public GameObject victoryScreen;
 
+    [Header("Game Over Screen")]
+    public GameObject gameoverScreen;
+
     [Header("Observable")]
     public PlayerStats playerStats;
 
@@ -72,6 +75,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health == 0) GameOver();
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnJumpButtonPress();
@@ -118,6 +123,12 @@ public class PlayerController : MonoBehaviour
                 damageAlertFade.alpha -= .05f;
             }
         }
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        gameoverScreen.SetActive(true);
     }
 
     public void OnJumpButtonPress()
