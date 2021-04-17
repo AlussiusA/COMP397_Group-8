@@ -44,11 +44,13 @@ public class PausePanelController : MonoBehaviour
         // this section looks complicated because it makes no assumption about the length of
         // either shipParts array. This allows us to use as many parts as we want
         int i = 0;
+        int count = 0;
         while (i < sceneData.collectedParts.Length && i < shipParts.Length)
         {
             if (sceneData.collectedParts[i])
             {
                 shipParts[i].CollectItem();
+                count++;
             }
             else
             {
@@ -61,6 +63,7 @@ public class PausePanelController : MonoBehaviour
             shipParts[i].ResetItem();
             i++;
         }
+        player.partsCollected = count;
 
         // Load health and collected parts here
         player.SetHealth(sceneData.health);
