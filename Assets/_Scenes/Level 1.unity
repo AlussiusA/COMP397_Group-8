@@ -5181,13 +5181,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are an Astronaut stranded in a different world. In order for you to
-    go home to earth, you need to explore this planet and collect parts for your
-    ship. You need to avoid the goblins and traps or you''ll lose some health.
+  m_text: 'You are an astronaut stranded in a different world. You just crahed your
+    spaceship in this unknown planet an in order for you to return home to earth,
+    you need to explore this planet and collect the lost parts of your ship. You
+    need to avoid the goblins and traps or you''ll lose some health.
 
 
-    Good
-    Luck and Enjoy the Game.'
+    Good Luck
+    and Enjoy the Game.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
